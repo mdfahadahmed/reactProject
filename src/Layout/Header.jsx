@@ -1,18 +1,20 @@
-import Logos from "../assets/Runo-logos.png";
 import Menu from "../Layout/Menu";
+import SocialIcon from "./SocialIcon";
 
 export default function Header() {
   return (
-    <div className="flex justify-between px-10 items-center	grid-cols-3	bg-white border-b-2 border-gray-500	">
-      <div >
-         <img className="w-60 h-auto" src={Logos} alt="Logo" />
+    <header className="flex justify-between align-middle px-10 items-center	grid-cols-3	bg-black/[.24] border-gray-500 py-5 absolute w-full ">
+      <div className="logos">
+         <h2 className="uppercase font-mono text-white font-bold text-5xl">RUNO</h2>
       </div>
-      <div>
+      <div className="flex align-middle">
+      <div className="menus">
         <Menu/>
       </div>
-      <div>
-        <a className="py-4 px-5 rounded bg-red-400 text-white" href="">Click Now</a>
+      <div className="social-icons">
+        <SocialIcon/>
       </div>
-    </div>
+      </div>
+    </header>
   )
 }
